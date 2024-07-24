@@ -14,4 +14,4 @@ jobs:
       - name: Pull upstream
         run: |
           ./download.sh
-          git push origin upstream
+          git push origin master
