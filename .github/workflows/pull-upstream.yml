@@ -17,5 +17,5 @@ jobs:
           git config user.name ci
           git config user.email ci@openbible.io
           git add .
-          git commit -m "update $(date)"
+          git diff-index --cached --quiet HEAD || git commit -m "update $(date)"
           git push origin master

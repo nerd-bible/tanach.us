@@ -1,5 +1,5 @@
 # tanach.us
 
-Downstream downloader of <https://tanach.us> which doesn't seem to have a Git repository.
+Unofficial version control for <https://tanach.us> XML files. Updated daily.
 
-Updated daily. Run `./download.sh` to update manually.
+Run `./download.sh` to update manually.
