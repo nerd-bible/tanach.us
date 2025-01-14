@@ -20,30 +20,32 @@
     </titleStmt>
     <editionStmt>
       <edition>Unicode/XML Leningrad Codex (UXLC)
-        <version>UXLC 2.1</version>
-        <date>1 Apr 2024</date>
-        <build>27.2</build>
-        <buildDateTime>31 Mar 2024  06:58</buildDateTime>
+        <version>UXLC 2.2</version>
+        <date>19 Oct 2024</date>
+        <build>27.3</build>
+        <buildDateTime>18 Oct 2024  05:59</buildDateTime>
       </edition>
 <respStmt>
-<resp>WLC2XML[21 Apr 2023] - Transcription from Michigan-Claremont encoding to Unicode with XML markings. See details in notes.</resp>
+<resp>WLC2XML[8 Jul 2024] - Transcription from Michigan-Claremont encoding to Unicode with XML markings. See details in notes.</resp>
 <resp>ScanReplace/EditWLC[30 Dec 2020] - Edits/removes transcription notes; removes MDs.</resp>
 <resp>ScanReplace/InsertCGJs[29 Dec 2020] - Places CGJ in Jerusalem VUV words and leading metegs.</resp>
-<resp>Updater[15 Sep 2023] - Changes.xml file dated 2020.02.19 . </resp>
-<resp>Updater[15 Sep 2023] - Changes.xml file dated 2020.10.19 . </resp>
-<resp>Updater[15 Sep 2023] - Changes.xml file dated 2021.04.01 . </resp>
-<resp>Updater[15 Sep 2023] - Changes.xml file dated 2021.10.19 . </resp>
-<resp>Updater[15 Sep 2023] - Changes.xml file dated 2022.04.01 . </resp>
-<resp>Updater[15 Sep 2023] - Changes.xml file dated 2022.07.04 . </resp>
-<resp>Updater[15 Sep 2023] - Changes.xml file dated 2022.10.19 . </resp>
-<resp>Updater[15 Sep 2023] - Changes.xml file dated 2022.12.07 . </resp>
-<resp>Updater[15 Sep 2023] - Changes.xml file dated 2023.04.01 . </resp>
-<resp>Updater[15 Sep 2023] - Changes.xml file dated 2023.07.04 . </resp>
-<resp>Updater[15 Sep 2023] - Changes.xml file dated 2023.10.19 . </resp>
-<resp>Updater[15 Sep 2023] - Changes.xml file dated 2024.04.01 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2020.02.19 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2020.10.19 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2021.04.01 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2021.10.19 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2022.04.01 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2022.07.04 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2022.10.19 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2022.12.07 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2023.04.01 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2023.07.04 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2023.10.19 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2024.04.01 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2024.10.19 . </resp>
+<resp>ScanReplace/RemoveNewlines[18 May 2024] - Removes newlines (\n) from w, q, k tags.</resp>
 </respStmt>
     </editionStmt>
-    <extent>489092</extent>
+    <extent>490740</extent>
     <publicationStmt>
       <distributor>Via web site:
         <name>Christopher V. Kimball</name>
@@ -87,6 +89,14 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
 <filedate>2024.04.01</filedate>
 <date>2023.09.16</date>
 <n>4</n>
+</correction>
+<correction>
+<citation>8:10.3</citation>
+<description>Add transcription note 'y' to yatir ketiv word. (yatir yod) Add note 't' for ambiquity.</description>
+<author>CVK</author>
+<filedate>2024.10.19</filedate>
+<date>2024.07.08</date>
+<n>32</n>
 </correction>
 <correction>
 <citation>8:11.26</citation>
@@ -273,6 +283,14 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
 <n>16</n>
 </correction>
 <correction>
+<citation>29:28.7</citation>
+<description>Add transcription note 'y' to yatir ketiv word. (yatir tsadi)</description>
+<author>CVK</author>
+<filedate>2024.10.19</filedate>
+<date>2024.07.08</date>
+<n>33</n>
+</correction>
+<correction>
 <citation>29:31.4</citation>
 <description>Remove qadma over tav; add pashta to he.</description>
 <author>Daniel Holman</author>
@@ -295,6 +313,22 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
 <filedate>2023.10.19</filedate>
 <date>2023.08.10</date>
 <n>11</n>
+</correction>
+<correction>
+<citation>31:12.9</citation>
+<description>Add transcription note 'y' to yatir ketiv word. (yatir vav)</description>
+<author>CVK</author>
+<filedate>2024.10.19</filedate>
+<date>2024.07.08</date>
+<n>34</n>
+</correction>
+<correction>
+<citation>31:13.13</citation>
+<description>Add transcription note 'y' to yatir ketiv word. (yatir vav)</description>
+<author>CVK</author>
+<filedate>2024.10.19</filedate>
+<date>2024.07.08</date>
+<n>35</n>
 </correction>
 <correction>
 <citation>31:18.3</citation>
@@ -343,6 +377,14 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
 <filedate>2024.04.01</filedate>
 <date>2023.09.16</date>
 <n>22</n>
+</correction>
+<correction>
+<citation>34:25.4</citation>
+<description>Add transcription note 'y' to yatir ketiv word. (yatir yod)</description>
+<author>CVK</author>
+<filedate>2024.10.19</filedate>
+<date>2024.07.08</date>
+<n>36</n>
 </correction>
 <correction>
 <citation>35:9.3</citation>
@@ -3485,7 +3527,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
       <v n="10">
         <w>וְאֵ֨לֶּה</w>
         <w>שָׂרֵ֧י</w>
-        <k>הנציבים</k>
+        <k>הנצי<x>t</x><x>y</x>בים</k>
         <q>הַנִּצָּבִ֛ים</q>
         <w>אֲשֶׁר־</w>
         <w>לַמֶּ֥לֶךְ</w>
@@ -6260,8 +6302,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
       </v>
       <v n="4">
         <w>וַיִּשְׁמַ֨ע</w>
-        <w>בֶּן<x>c</x>
-</w>
+        <w>בֶּן<x>c</x></w>
         <w>הֲדַ֜ד</w>
         <w>אֶל־</w>
         <w>הַמֶּ֣לֶךְ</w>
@@ -12001,7 +12042,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>וְהַשִּׁ֣יר</w>
         <w>מְשׁוֹרֵ֔ר</w>
         <w>וְהַחֲצֹצְר֖וֹת</w>
-        <k>מחצצרים</k>
+        <k>מחצצ<x>y</x>רים</k>
         <q>מַחְצְרִ֑ים</q>
         <w>הַכֹּ֕ל</w>
         <w>עַ֖ד</w>
@@ -12857,7 +12898,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>בֶּאֱמוּנָ֑ה</w>
         <w>וַעֲלֵיהֶ֤ם</w>
         <w>נָגִיד֙</w>
-        <k>כונניהו</k>
+        <k>כו<x>y</x>נניהו</k>
         <q>כָּֽנַנְיָ֣הוּ</q>
         <w>הַלֵּוִ֔י</w>
         <w>וְשִׁמְעִ֥י</w>
@@ -12877,7 +12918,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>וּבְנָיָ֑הוּ</w>
         <w>פְּקִידִ֗ים</w>
         <w>מִיַּ֤ד</w>
-        <k>כונניהו</k>
+        <k>כו<x>y</x>נניהו</k>
         <q>כָּֽנַנְיָ֙הוּ֙</q>
         <w>וְשִׁמְעִ֣י</w>
         <w>אָחִ֔יו</w>
@@ -14574,7 +14615,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>תַּ֣חַת ׀</w>
         <w>אֲשֶׁ֣ר</w>
         <w>עֲזָב֗וּנִי</w>
-        <k>ויקטירו</k>
+        <k>ויקטי<x>y</x>רו</k>
         <q>וַֽיְקַטְּרוּ֙</q>
         <w>לֵֽאלֹהִ֣ים</w>
         <w>אֲחֵרִ֔ים</w>
@@ -15745,6 +15786,11 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
     <note>This meteg is a merkha in other texts.</note>
   </note>
   <note>
+    <code>q</code>
+    <gccode>q</gccode>
+    <note>UXLC differs from the conventional word for the qere.</note>
+  </note>
+  <note>
     <code>t</code>
     <gccode>t</gccode>
     <note>Transcription uncertain. Examine the LC image for other possible readings.</note>
@@ -15753,6 +15799,11 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
     <code>X</code>
     <gccode>X</gccode>
     <note>This verse does NOT occur in the Leningrad Codex. Included for continuity of verse numbering.</note>
+  </note>
+  <note>
+    <code>y</code>
+    <gccode>y</gccode>
+    <note>Yatir: The preceding Hebrew letter is "superfluous".</note>
   </note>
 </notes>
 </Tanach>
