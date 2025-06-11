@@ -4,7 +4,7 @@ on:
     - cron: '0 0 * * *'
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: write-all
 
 jobs:
   pull-upstream:
@@ -12,25 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Keep cron active
-        run: |
-          get_workflow_name() {
-              local ref=$GITHUB_WORKFLOW_REF
-              [ -z "$ref" ] && err 'No workflows'
-
-              ref=${ref%@*}  # split('@')[0]
-              ref=${ref##*/} # split('/')[-1]
-              echo "$ref"
-          }
-          API_BASE=repos/$GITHUB_REPOSITORY/actions/workflows
-          endpoint=$API_BASE/$(get_workflow_name)/enable
-          echo $endpoint
-          if gh api -X PUT --silent "$endpoint"; then
-              echo "$(green '✓ Enabled') $workflow"
-          else
-              warn "$(red '✗ Failed to enable') $workflow"
-          fi
-        env:
-          GH_TOKEN: ${{ github.token }}
+        uses: WaterLemons2k/scheduled-workflow-activity-action@v1
       - name: Pull upstream
         run: |
           ./download.sh
