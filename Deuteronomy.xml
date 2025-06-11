@@ -20,10 +20,10 @@
     </titleStmt>
     <editionStmt>
       <edition>Unicode/XML Leningrad Codex (UXLC)
-        <version>UXLC 2.2</version>
-        <date>19 Oct 2024</date>
-        <build>27.3</build>
-        <buildDateTime>18 Oct 2024  05:59</buildDateTime>
+        <version>UXLC 2.3</version>
+        <date>1 Apr 2025</date>
+        <build>27.4</build>
+        <buildDateTime>31 March 2025  06:24</buildDateTime>
       </edition>
 <respStmt>
 <resp>WLC2XML[8 Jul 2024] - Transcription from Michigan-Claremont encoding to Unicode with XML markings. See details in notes.</resp>
@@ -42,10 +42,11 @@
 <resp>Updater[2 May 2024] - Changes.xml file dated 2023.10.19 . </resp>
 <resp>Updater[2 May 2024] - Changes.xml file dated 2024.04.01 . </resp>
 <resp>Updater[2 May 2024] - Changes.xml file dated 2024.10.19 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2025.04.01 . </resp>
 <resp>ScanReplace/RemoveNewlines[18 May 2024] - Removes newlines (\n) from w, q, k tags.</resp>
 </respStmt>
     </editionStmt>
-    <extent>517924</extent>
+    <extent>518247</extent>
     <publicationStmt>
       <distributor>Via web site:
         <name>Christopher V. Kimball</name>
@@ -489,6 +490,14 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
 <filedate>2022.07.04</filedate>
 <date>2022.04.07</date>
 <n>13</n>
+</correction>
+<correction>
+<citation>28:11.7</citation>
+<description>Patah under the he is a segol in many texts. Add note'c' after he.</description>
+<author>Ben Denckla</author>
+<filedate>2025.04.01</filedate>
+<date>2024.11.29</date>
+<n>1</n>
 </correction>
 <correction>
 <citation>28:27.6</citation>
@@ -13315,7 +13324,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>בִּפְרִ֧י</w>
         <w>בִטְנְךָ֛</w>
         <w>וּבִפְרִ֥י</w>
-        <w>בְ<x>t</x>הַמְתְּךָ֖</w>
+        <w>בְ<x>t</x>הַ<x>c</x>מְתְּךָ֖</w>
         <w>וּבִפְרִ֣י</w>
         <w>אַדְמָתֶ֑ךָ</w>
         <w>עַ֚ל</w>
