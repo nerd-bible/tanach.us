@@ -9,8 +9,12 @@ import { downloadDir } from "./download";
 const outdir = "dist";
 
 class BookWriter extends ConlluWriter {
-	variants: { ketiv: Sentence; qere?: Sentence } = {
+	variants: {
+		ketiv: Sentence;
+		qere: Sentence;
+	} = {
 		ketiv: new Sentence(),
+		qere: new Sentence(),
 	};
 	newpar = "";
 
@@ -19,7 +23,16 @@ class BookWriter extends ConlluWriter {
 	}
 
 	writeVerse(chapter: string, verse: string) {
+		if (!this.variants.ketiv) {
+			console.log("HOW", chapter, verse)
+		}
+		if (this.variants.qere.equals(this.variants.ketiv)) {
+			this.variants.qere.words = [];
+		}
+
 		for (const [v, sentence] of Object.entries(this.variants)) {
+			if (!sentence.words.length) continue;
+
 			sentence.id = "LC-tanach.us";
 			sentence.id += `-${this.book}-${chapter}:${verse}`;
 			if (v !== "ketiv") sentence.id += `-${v}`;
@@ -28,7 +41,7 @@ class BookWriter extends ConlluWriter {
 		}
 
 		this.newpar = "";
-		this.variants = { ketiv: new Sentence() };
+		this.variants = { ketiv: new Sentence(), qere: new Sentence() };
 	}
 
 	pushVariant(v: string, word: Word) {
@@ -212,13 +225,7 @@ async function convertToConLLU() {
 
 					if (tag === "w") writer.pushAll(word);
 					else if (tag === "k") writer.pushVariant("ketiv", word);
-					else if (tag === "q") {
-						if (!("qere" in writer.variants)) {
-							writer.variants.qere =
-								writer.variants.ketiv?.clone() ?? new Sentence();
-						}
-						writer.pushVariant("qere", word);
-					}
+					else if (tag === "q") writer.pushVariant("qere", word);
 				}
 				writer.writeVerse(chapter, verse);
 			}

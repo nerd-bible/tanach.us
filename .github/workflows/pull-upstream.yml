@@ -14,11 +14,21 @@ jobs:
       - uses: actions/checkout@v4
       - name: Keep cron active
         uses: WaterLemons2k/scheduled-workflow-activity-action@v1
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
       - name: Pull upstream
         run: |
-          ./download.sh
+          bun download
           git config user.name ci
           git config user.email ci@openbible.io
           git add .
-          git diff-index --cached --quiet HEAD || git commit -m "automatic update"
-          git push origin master
+          if git diff-index --cached --quiet HEAD ; then
+            echo "No changes"
+          else
+            git commit -m "automatic update"
+            git push origin master
+            bun pm version patch
+            bun convert
+            bun publish --access public
+          fi

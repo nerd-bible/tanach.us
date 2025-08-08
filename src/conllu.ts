@@ -39,6 +39,10 @@ export class Sentence {
 		res.words = this.words.slice();
 		return res;
 	}
+
+	equals(other: Sentence): boolean {
+		return this.words.every((w, i) => w.FORM === other.words[i]?.FORM);
+	}
 }
 
 export class ConlluWriter {
