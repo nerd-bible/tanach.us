@@ -11,7 +11,8 @@
 	},
 	"scripts": {
 		"download": "bun ./src/download.ts",
-		"convert": "bun ./src/convert.ts",
+		"convert": "bun ./src/convert.ts"
 	},
-	"files": [ "dist/*" ]
+	"files": ["dist/*"],
+	"version": "0.0.1"
 }
