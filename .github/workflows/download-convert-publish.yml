@@ -1,4 +1,4 @@
-name: Download, maybe convert, push, and publish
+name: Download, maybe convert and publish
 on:
   schedule:
     - cron: '0 0 * * *'
@@ -8,7 +8,7 @@ permissions:
   actions: write
 
 jobs:
-  pull-upstream:
+  download-convert-publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

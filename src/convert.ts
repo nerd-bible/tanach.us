@@ -1,12 +1,15 @@
-import { mkdir, readdir, readFile } from "node:fs/promises";
-import { XMLParser } from "fast-xml-parser";
-import { BookId, bookFromEnglish } from "./books";
-import { ConlluWriter, Sentence, Word } from "./conllu";
-import { join } from "node:path";
 import { createWriteStream } from "node:fs";
+import { mkdir, readdir, readFile } from "node:fs/promises";
+import { join } from "node:path";
+import { XMLParser } from "fast-xml-parser";
+import { type BookId, bookFromEnglish } from "./books";
+import type { Word } from "./conllu";
+import { ConlluWriter, Sentence } from "./conllu";
 import { downloadDir } from "./download";
 
 const outdir = "dist";
+
+type MiscWord = Word & Required<Pick<Word, "MISC">>;
 
 class BookWriter extends ConlluWriter {
 	variants: {
@@ -24,7 +27,7 @@ class BookWriter extends ConlluWriter {
 
 	writeVerse(chapter: string, verse: string) {
 		if (!this.variants.ketiv) {
-			console.log("HOW", chapter, verse)
+			console.log("HOW", chapter, verse);
 		}
 		if (this.variants.qere.equals(this.variants.ketiv)) {
 			this.variants.qere.words = [];
@@ -44,11 +47,11 @@ class BookWriter extends ConlluWriter {
 		this.variants = { ketiv: new Sentence(), qere: new Sentence() };
 	}
 
-	pushVariant(v: string, word: Word) {
+	pushVariant(v: string, word: MiscWord) {
 		const s = this.variants[v];
 		word.ID = (s.words.length + 1).toString();
 
-		let punct: Word = {
+		const punct: MiscWord = {
 			ID: (s.words.length + 2).toString(),
 			FORM: "",
 			LEMMA: "",
@@ -60,18 +63,18 @@ class BookWriter extends ConlluWriter {
 			punct.LEMMA = punct.FORM;
 			word.FORM = word.FORM.substring(0, word.FORM.length - 1).trimEnd();
 
-			if (punct.FORM !== "׀") word.MISC!.SpaceAfter = "No";
-			if (punct.FORM === "־") punct.MISC!.SpaceAfter = "No";
-			if (word.MISC?.["weirdPunct"]) {
-				punct.MISC!.Weird = "Yes";
-				delete word.MISC?.weirdPunct;
+			if (punct.FORM !== "׀") word.MISC.SpaceAfter = "No";
+			if (punct.FORM === "־") punct.MISC.SpaceAfter = "No";
+			if (word.MISC.weirdPunct) {
+				punct.MISC.Weird = "Yes";
+				delete word.MISC.weirdPunct;
 			}
 		}
 		if (word.FORM) s.words.push(word);
 		if (punct.FORM) s.words.push(punct);
 	}
 
-	pushAll(word: Word) {
+	pushAll(word: MiscWord) {
 		for (const k of Object.keys(this.variants))
 			this.pushVariant(k, structuredClone(word));
 	}
@@ -95,7 +98,7 @@ async function convertToConLLU() {
 		let book: BookId;
 		try {
 			book = bookFromEnglish(entry);
-		} catch (err) {
+		} catch {
 			console.error(entry);
 			continue;
 		}
@@ -137,7 +140,7 @@ async function convertToConLLU() {
 					}
 					if ("reversednun" in w) {
 						// https://software.sil.org/ezra/ezrainfo/
-						writer.pushAll({ ID: "", FORM: "׆", UPOS: "PUNCT" });
+						writer.pushAll({ ID: "", FORM: "׆", UPOS: "PUNCT", MISC: {} });
 						continue;
 					}
 					// We might have transcription notes baked into the verse or word.
@@ -147,16 +150,18 @@ async function convertToConLLU() {
 						switch (tnote) {
 							// This verse does NOT occur in the Leningrad Codex.
 							// Included for continuity of verse numbering.
-							case "X": continue verseIter;
+							case "X":
+								continue verseIter;
 							// Inverted nun, but there's another <reversednun /> tag coming
-							case "8": continue;
+							case "8":
+								continue;
 							default:
 								console.error("unknown transcription verse note", tnote);
 								continue;
 						}
 					}
 
-					let word: Word & Required<Pick<Word, "MISC">> = {
+					const word: MiscWord = {
 						ID: "",
 						FORM: "",
 						MISC: {},
@@ -175,7 +180,7 @@ async function convertToConLLU() {
 						}
 
 						if ("s" in m) {
-							word.MISC.Fmt ??= '';
+							word.MISC.Fmt ??= "";
 							const text = m.s[0]["#text"].normalize("NFC");
 							word.MISC.Fmt += `${word.FORM.length}-${word.FORM.length + text.length}`;
 							word.MISC.Fmt += `:${m[":@"].attributes.t}`;
@@ -183,31 +188,31 @@ async function convertToConLLU() {
 						}
 
 						if ("x" in m) {
-							const tnote =  m.x[0]["#text"].toString();
-							let prop = '';
+							const tnote = m.x[0]["#text"].toString();
+							let prop = "";
 							switch (tnote) {
-								case 'c':
-								case 'q':
+								case "c":
+								case "q":
 									prop = "Weird";
 									break;
-								case 'd':
-									prop = 'Tipeha-dehi';
+								case "d":
+									prop = "Tipeha-dehi";
 									break;
-								case 'm':
-									prop = 'Meteg-merkha';
+								case "m":
+									prop = "Meteg-merkha";
 									break;
-								case 't':
-									prop = 'Unclear';
+								case "t":
+									prop = "Unclear";
 									break;
-								case 'y':
-									prop += 'Yatir';
+								case "y":
+									prop += "Yatir";
 									break;
-								case '4':
-									prop += 'weirdPunct';
+								case "4":
+									prop += "weirdPunct";
 									break;
-								case '5':
-								case '6':
-								case '7':
+								case "5":
+								case "6":
+								case "7":
 									// included in "s" tag's "t" attribute
 									break;
 								default:
