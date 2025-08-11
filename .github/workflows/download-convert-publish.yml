@@ -29,8 +29,6 @@ jobs:
             git add .
             git commit -m "automatic update"
             bun pm version patch
-            git add .
-            git commit -m "version bump"
             git push origin master
             bun publish --access public
           fi
