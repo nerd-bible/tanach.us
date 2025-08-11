@@ -1,4 +1,4 @@
-name: Pull upstream
+name: Download, maybe convert, push, and publish
 on:
   schedule:
     - cron: '0 0 * * *'
@@ -15,22 +15,22 @@ jobs:
       - name: Keep cron active
         uses: WaterLemons2k/scheduled-workflow-activity-action@v1
       - uses: oven-sh/setup-bun@v2
-        with:
-          bun-version: latest
-      - name: Pull upstream
+      - name: Download
+        run: bun download
+      - name: Maybe convert, push, and publish
         run: |
-          bun download
-          bun convert
           git config user.name ci
-          git config user.email ci@openbible.io
+          git config user.email ci@nerd.bible
           git add .
           if git diff-index --cached --quiet HEAD ; then
             echo "No changes"
           else
+            bun convert
+            git add .
             git commit -m "automatic update"
-            git push origin master
             bun pm version patch
             git add .
             git commit -m "version bump"
+            git push origin master
             bun publish --access public
           fi
