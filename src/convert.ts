@@ -231,9 +231,7 @@ async function convertToConLLU() {
 					else if (tag === "q") writer.pushVariant("qere", word);
 				}
 				writer.writeVerse(chapter, verse);
-				if (newpar) {
-					writer.newpar = newpar;
-				}
+				writer.newpar = newpar;
 			}
 		}
 
