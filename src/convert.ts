@@ -19,7 +19,6 @@ class BookWriter extends ConlluWriter {
 		ketiv: new Sentence(),
 		qere: new Sentence(),
 	};
-	newpar = "";
 
 	constructor(public book: BookId) {
 		super(createWriteStream(join(outdir, `${book}.conllu`), { flags: "w" }));
@@ -39,11 +38,9 @@ class BookWriter extends ConlluWriter {
 			sentence.id = "LC-tanach.us";
 			sentence.id += `-${this.book}-${chapter}:${verse}`;
 			if (v !== "ketiv") sentence.id += `-${v}`;
-			if (this.newpar) sentence.comments["newpar class"] = this.newpar;
 			this.write(sentence);
 		}
 
-		this.newpar = "";
 		this.variants = { ketiv: new Sentence(), qere: new Sentence() };
 	}
 
@@ -131,11 +128,11 @@ async function convertToConLLU() {
 
 				for (const w of v.v) {
 					if ("samekh" in w) {
-						writer.newpar = "samekh";
+						writer.pushAll({ ID: "", FORM: "ס", UPOS: "PUNCT", MISC: {} });
 						continue;
 					}
 					if ("pe" in w) {
-						writer.newpar = "pe";
+						writer.pushAll({ ID: "", FORM: "פ", UPOS: "PUNCT", MISC: {} });
 						continue;
 					}
 					if ("reversednun" in w) {
