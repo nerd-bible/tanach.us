@@ -5,7 +5,9 @@
 	"license": "CC0-1.0",
 	"devDependencies": {
 		"@biomejs/biome": "2.1.4",
+		"@nerd-bible/core": "file:../core",
 		"@types/bun": "^1.2.19",
+		"@types/unzipper": "^0.10.11",
 		"fast-xml-parser": "^5.2.5",
 		"progress": "^2.0.3",
 		"unzipper": "^0.12.3"

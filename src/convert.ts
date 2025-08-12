@@ -1,34 +1,38 @@
 import { createWriteStream } from "node:fs";
 import { mkdir, readdir, readFile } from "node:fs/promises";
 import { join } from "node:path";
+import { conllu, book } from "@nerd-bible/core";
 import { XMLParser } from "fast-xml-parser";
-import { type BookId, bookFromEnglish } from "./books";
-import type { Word } from "./conllu";
-import { ConlluWriter, Sentence } from "./conllu";
 import { downloadDir } from "./download";
 
 const outdir = "dist";
 
+type Sentence = conllu.Sentence;
+type Word = conllu.Word;
 type MiscWord = Word & Required<Pick<Word, "MISC">>;
 
-class BookWriter extends ConlluWriter {
+class BookWriter extends conllu.Writer {
 	variants: {
 		ketiv: Sentence;
 		qere: Sentence;
-	} = {
-		ketiv: new Sentence(),
-		qere: new Sentence(),
 	};
 	newpar = "";
 
-	constructor(public book: BookId) {
+	constructor(public book: book.Id) {
 		super(createWriteStream(join(outdir, `${book}.conllu`), { flags: "w" }));
+		this.resetVariants();
+	}
+
+	resetVariants() {
+		this.variants = {
+			ketiv: new conllu.Sentence(""),
+			qere: new conllu.Sentence(""),
+		};
 	}
 
 	writeVerse(chapter: string, verse: string) {
-		if (this.variants.qere.equals(this.variants.ketiv)) {
+		if (this.variants.qere.formEquals(this.variants.ketiv))
 			this.variants.qere.words = [];
-		}
 
 		for (const [v, sentence] of Object.entries(this.variants)) {
 			if (!sentence.words.length) continue;
@@ -41,7 +45,7 @@ class BookWriter extends ConlluWriter {
 		}
 
 		this.newpar = "";
-		this.variants = { ketiv: new Sentence(), qere: new Sentence() };
+		this.resetVariants();
 	}
 
 	pushVariant(v: string, word: MiscWord) {
@@ -92,9 +96,9 @@ async function convertToConLLU() {
 		)
 			continue;
 
-		let book: BookId;
+		let bookId: book.Id;
 		try {
-			book = bookFromEnglish(entry);
+			bookId = book.fromEnglish(entry);
 		} catch {
 			console.error(entry);
 			continue;
@@ -114,7 +118,7 @@ async function convertToConLLU() {
 			unpairedTags: ["samekh", "pe", "reversednun"], // tyyyyyy
 		});
 
-		const writer = new BookWriter(book);
+		const writer = new BookWriter(bookId);
 
 		for (const c of result[1].Tanach[1].tanach[0].book) {
 			if (!("c" in c)) continue;
@@ -125,7 +129,7 @@ async function convertToConLLU() {
 				if (!("v" in v)) continue;
 
 				const verse = v[":@"].attributes.n;
-				let newpar = '';
+				let newpar = "";
 
 				for (const w of v.v) {
 					if ("samekh" in w) {
@@ -173,7 +177,7 @@ async function convertToConLLU() {
 
 					for (const m of Array.isArray(obj) ? obj : [obj]) {
 						if (!m) {
-							console.error(book, chapter, verse, w);
+							console.error(bookId, chapter, verse, w);
 							continue;
 						}
 
