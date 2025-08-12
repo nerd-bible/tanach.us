@@ -1,17 +1,17 @@
 import { createWriteStream } from "node:fs";
 import { mkdir, readdir, readFile } from "node:fs/promises";
 import { join } from "node:path";
-import { conllu, book } from "@nerd-bible/core";
+import { conllup, book } from "@nerd-bible/core";
 import { XMLParser } from "fast-xml-parser";
 import { downloadDir } from "./download";
 
 const outdir = "dist";
 
-type Sentence = conllu.Sentence;
-type Word = conllu.Word;
+type Sentence = conllup.Sentence;
+type Word = conllup.Word;
 type MiscWord = Word & Required<Pick<Word, "MISC">>;
 
-class BookWriter extends conllu.Writer {
+class BookWriter extends conllup.Writer {
 	variants: {
 		ketiv: Sentence;
 		qere: Sentence;
@@ -19,14 +19,22 @@ class BookWriter extends conllu.Writer {
 	newpar = "";
 
 	constructor(public book: book.Id) {
-		super(createWriteStream(join(outdir, `${book}.conllu`), { flags: "w" }));
+		super(
+			createWriteStream(join(outdir, `${book}.conllup`), { flags: "w" }),
+			{
+				ID: {},
+				FORM: {},
+				UPOS: {},
+				MISC: {},
+			},
+		);
 		this.resetVariants();
 	}
 
 	resetVariants() {
 		this.variants = {
-			ketiv: new conllu.Sentence(""),
-			qere: new conllu.Sentence(""),
+			ketiv: new conllup.Sentence(""),
+			qere: new conllup.Sentence(""),
 		};
 	}
 
