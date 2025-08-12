@@ -19,15 +19,13 @@ class BookWriter extends ConlluWriter {
 		ketiv: new Sentence(),
 		qere: new Sentence(),
 	};
+	newpar = "";
 
 	constructor(public book: BookId) {
 		super(createWriteStream(join(outdir, `${book}.conllu`), { flags: "w" }));
 	}
 
 	writeVerse(chapter: string, verse: string) {
-		if (!this.variants.ketiv) {
-			console.log("HOW", chapter, verse);
-		}
 		if (this.variants.qere.equals(this.variants.ketiv)) {
 			this.variants.qere.words = [];
 		}
@@ -38,9 +36,11 @@ class BookWriter extends ConlluWriter {
 			sentence.id = "LC-tanach.us";
 			sentence.id += `-${this.book}-${chapter}:${verse}`;
 			if (v !== "ketiv") sentence.id += `-${v}`;
+			if (this.newpar) sentence.comments["newpar class"] = this.newpar;
 			this.write(sentence);
 		}
 
+		this.newpar = "";
 		this.variants = { ketiv: new Sentence(), qere: new Sentence() };
 	}
 
@@ -125,14 +125,15 @@ async function convertToConLLU() {
 				if (!("v" in v)) continue;
 
 				const verse = v[":@"].attributes.n;
+				let newpar = '';
 
 				for (const w of v.v) {
 					if ("samekh" in w) {
-						writer.pushAll({ ID: "", FORM: "ס", UPOS: "PUNCT", MISC: {} });
+						newpar = "ס";
 						continue;
 					}
 					if ("pe" in w) {
-						writer.pushAll({ ID: "", FORM: "פ", UPOS: "PUNCT", MISC: {} });
+						newpar = "פ";
 						continue;
 					}
 					if ("reversednun" in w) {
@@ -230,6 +231,9 @@ async function convertToConLLU() {
 					else if (tag === "q") writer.pushVariant("qere", word);
 				}
 				writer.writeVerse(chapter, verse);
+				if (newpar) {
+					writer.newpar = newpar;
+				}
 			}
 		}
 
