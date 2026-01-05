@@ -1,67 +1,66 @@
-import { createWriteStream } from "node:fs";
-import { mkdir, readdir, readFile } from "node:fs/promises";
+import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
-import { conllup, book } from "@nerd-bible/core";
+import { book, conllu } from "@nerd-bible/core";
 import { XMLParser } from "fast-xml-parser";
 import { downloadDir } from "./download";
 
 const outdir = "dist";
 
-type Sentence = conllup.Sentence;
-type Word = conllup.Word;
-type MiscWord = Word & Required<Pick<Word, "MISC">>;
+type Row = conllu.Row & Required<Pick<conllu.Row, "FORM" | "ID">>;
+type MiscRow = Row & { MISC: conllu.Kvs };
 
-class BookWriter extends conllup.Writer {
+function formEquals(a: conllu.Sentence, b: conllu.Sentence) {
+	return (
+		a.rows.length === b.rows.length &&
+		a.rows.every((r, i) => r.FORM === b.rows[i].FORM)
+	);
+}
+
+class BookWriter extends conllu.Formatter {
 	variants: {
-		ketiv: Sentence;
-		qere: Sentence;
+		ketiv: conllu.Sentence;
+		qere: conllu.Sentence;
 	};
 	newpar = "";
+	book: book.Id;
 
-	constructor(public book: book.Id) {
-		super(
-			createWriteStream(join(outdir, `${book}.conllup`), { flags: "w" }),
-			{
-				ID: {},
-				FORM: {},
-				UPOS: {},
-				MISC: {},
-			},
-		);
+	constructor(book: book.Id) {
+		super();
+		this.book = book;
 		this.resetVariants();
 	}
 
 	resetVariants() {
 		this.variants = {
-			ketiv: new conllup.Sentence(""),
-			qere: new conllup.Sentence(""),
+			ketiv: { header: {}, rows: [] },
+			qere: { header: {}, rows: [] },
 		};
 	}
 
 	writeVerse(chapter: string, verse: string) {
-		if (this.variants.qere.formEquals(this.variants.ketiv))
-			this.variants.qere.words = [];
+		if (formEquals(this.variants.qere, this.variants.ketiv))
+			this.variants.qere.rows = [];
 
 		for (const [v, sentence] of Object.entries(this.variants)) {
-			if (!sentence.words.length) continue;
+			if (!sentence.rows.length) continue;
 
-			sentence.id = "LC-tanach.us";
-			sentence.id += `-${this.book}-${chapter}:${verse}`;
-			if (v !== "ketiv") sentence.id += `-${v}`;
-			if (this.newpar) sentence.comments["newpar class"] = this.newpar;
-			this.write(sentence);
+			sentence.header.sent_id = "LC-tanach.us";
+			sentence.header.sent_id += `-${this.book}-${chapter}:${verse}`;
+			if (v !== "ketiv") sentence.header.sent_id += `-${v}`;
+			if (this.newpar) sentence.header["newpar class"] = this.newpar;
+			this.fmtSentence(sentence);
 		}
 
 		this.newpar = "";
 		this.resetVariants();
 	}
 
-	pushVariant(v: string, word: MiscWord) {
+	pushVariant(v: string, word: MiscRow) {
 		const s = this.variants[v];
-		word.ID = (s.words.length + 1).toString();
+		word.ID = (s.rows.length + 1).toString();
 
-		const punct: MiscWord = {
-			ID: (s.words.length + 2).toString(),
+		const punct: MiscRow = {
+			ID: (s.rows.length + 2).toString(),
 			FORM: "",
 			LEMMA: "",
 			UPOS: "PUNCT",
@@ -79,11 +78,11 @@ class BookWriter extends conllup.Writer {
 				delete word.MISC.weirdPunct;
 			}
 		}
-		if (word.FORM) s.words.push(word);
-		if (punct.FORM) s.words.push(punct);
+		if (word.FORM) s.rows.push(word);
+		if (punct.FORM) s.rows.push(punct);
 	}
 
-	pushAll(word: MiscWord) {
+	pushAll(word: MiscRow) {
 		for (const k of Object.keys(this.variants))
 			this.pushVariant(k, structuredClone(word));
 	}
@@ -150,7 +149,7 @@ async function convertToConLLU() {
 					}
 					if ("reversednun" in w) {
 						// https://software.sil.org/ezra/ezrainfo/
-						writer.pushAll({ ID: "", FORM: "׆", UPOS: "PUNCT", MISC: {} });
+						writer.pushAll({ ID: 0, FORM: "׆", UPOS: "PUNCT", MISC: {} });
 						continue;
 					}
 					// We might have transcription notes baked into the verse or word.
@@ -171,8 +170,8 @@ async function convertToConLLU() {
 						}
 					}
 
-					const word: MiscWord = {
-						ID: "",
+					const word: MiscRow = {
+						ID: 0,
 						FORM: "",
 						MISC: {},
 					};
@@ -247,7 +246,7 @@ async function convertToConLLU() {
 			}
 		}
 
-		await new Promise((res) => writer.stream.end(res));
+		await writeFile(join(outdir, `${writer.book}.conllu`), writer.res);
 	}
 }
 

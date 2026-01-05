@@ -13,8 +13,8 @@
 		"unzipper": "^0.12.3"
 	},
 	"scripts": {
-		"download": "bun ./src/download.ts",
-		"convert": "bun ./src/convert.ts"
+		"download": "node ./src/download.ts",
+		"convert": "node ./src/convert.ts"
 	},
 	"files": ["dist"]
 }

@@ -20,10 +20,10 @@
     </titleStmt>
     <editionStmt>
       <edition>Unicode/XML Leningrad Codex (UXLC)
-        <version>UXLC 2.3</version>
-        <date>1 Apr 2025</date>
-        <build>27.4</build>
-        <buildDateTime>31 March 2025  06:24</buildDateTime>
+        <version>UXLC 2.4</version>
+        <date>19 Oct 2025</date>
+        <build>27.5</build>
+        <buildDateTime>13 Oct 2025  06:35</buildDateTime>
       </edition>
 <respStmt>
 <resp>WLC2XML[8 Jul 2024] - Transcription from Michigan-Claremont encoding to Unicode with XML markings. See details in notes.</resp>
@@ -43,10 +43,11 @@
 <resp>Updater[2 May 2024] - Changes.xml file dated 2024.04.01 . </resp>
 <resp>Updater[2 May 2024] - Changes.xml file dated 2024.10.19 . </resp>
 <resp>Updater[2 May 2024] - Changes.xml file dated 2025.04.01 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2025.10.19 . </resp>
 <resp>ScanReplace/RemoveNewlines[18 May 2024] - Removes newlines (\n) from w, q, k tags.</resp>
 </respStmt>
     </editionStmt>
-    <extent>67086</extent>
+    <extent>67159</extent>
     <publicationStmt>
       <distributor>Via web site:
         <name>Christopher V. Kimball</name>

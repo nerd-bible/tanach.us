@@ -20,10 +20,10 @@
     </titleStmt>
     <editionStmt>
       <edition>Unicode/XML Leningrad Codex (UXLC)
-        <version>UXLC 2.3</version>
-        <date>1 Apr 2025</date>
-        <build>27.4</build>
-        <buildDateTime>31 March 2025  06:24</buildDateTime>
+        <version>UXLC 2.4</version>
+        <date>19 Oct 2025</date>
+        <build>27.5</build>
+        <buildDateTime>13 Oct 2025  06:35</buildDateTime>
       </edition>
 <respStmt>
 <resp>WLC2XML[8 Jul 2024] - Transcription from Michigan-Claremont encoding to Unicode with XML markings. See details in notes.</resp>
@@ -43,10 +43,11 @@
 <resp>Updater[2 May 2024] - Changes.xml file dated 2024.04.01 . </resp>
 <resp>Updater[2 May 2024] - Changes.xml file dated 2024.10.19 . </resp>
 <resp>Updater[2 May 2024] - Changes.xml file dated 2025.04.01 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2025.10.19 . </resp>
 <resp>ScanReplace/RemoveNewlines[18 May 2024] - Removes newlines (\n) from w, q, k tags.</resp>
 </respStmt>
     </editionStmt>
-    <extent>478653</extent>
+    <extent>478980</extent>
     <publicationStmt>
       <distributor>Via web site:
         <name>Christopher V. Kimball</name>
@@ -298,6 +299,14 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
 <filedate>2022.12.07</filedate>
 <date>2022.08.29</date>
 <n>18</n>
+</correction>
+<correction>
+<citation>18:14.4</citation>
+<description>Change qamats under dalet to sheva; change sheva under resh to qamats.</description>
+<author>Stephen Salisbury</author>
+<filedate>2025.10.19</filedate>
+<date>2025.03.21</date>
+<n>2</n>
 </correction>
 <correction>
 <citation>18:19.2</citation>
@@ -9239,7 +9248,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>וַיְהִ֥י</w>
         <w>דָוִ֛ד</w>
         <w>לְכָל־</w>
-        <w>דָּרְכָ֖ו</w>
+        <w>דְּרָכָ֖ו</w>
         <w>מַשְׂכִּ֑יל</w>
         <w>וַֽיהוָ֖ה</w>
         <w>עִמּֽוֹ׃</w>

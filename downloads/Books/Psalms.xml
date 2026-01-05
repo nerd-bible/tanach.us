@@ -20,10 +20,10 @@
     </titleStmt>
     <editionStmt>
       <edition>Unicode/XML Leningrad Codex (UXLC)
-        <version>UXLC 2.3</version>
-        <date>1 Apr 2025</date>
-        <build>27.4</build>
-        <buildDateTime>31 March 2025  06:24</buildDateTime>
+        <version>UXLC 2.4</version>
+        <date>19 Oct 2025</date>
+        <build>27.5</build>
+        <buildDateTime>13 Oct 2025  06:35</buildDateTime>
       </edition>
 <respStmt>
 <resp>WLC2XML[8 Jul 2024] - Transcription from Michigan-Claremont encoding to Unicode with XML markings. See details in notes.</resp>
@@ -44,10 +44,11 @@
 <resp>Updater[2 May 2024] - Changes.xml file dated 2024.04.01 . </resp>
 <resp>Updater[2 May 2024] - Changes.xml file dated 2024.10.19 . </resp>
 <resp>Updater[2 May 2024] - Changes.xml file dated 2025.04.01 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2025.10.19 . </resp>
 <resp>ScanReplace/RemoveNewlines[18 May 2024] - Removes newlines (\n) from w, q, k tags.</resp>
 </respStmt>
     </editionStmt>
-    <extent>780027</extent>
+    <extent>780626</extent>
     <publicationStmt>
       <distributor>Via web site:
         <name>Christopher V. Kimball</name>
@@ -107,6 +108,14 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
 <filedate>2023.07.04</filedate>
 <date>2023.03.25</date>
 <n>6</n>
+</correction>
+<correction>
+<citation>7:10.8</citation>
+<description>Unusual accent pair: dehi, revia. Add transcription note 'c' after bet.</description>
+<author>Ben Denckla</author>
+<filedate>2025.10.19</filedate>
+<date>2025.04.24</date>
+<n>1</n>
 </correction>
 <correction>
 <citation>8:3.10</citation>
@@ -942,6 +951,14 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
 <filedate>2023.07.04</filedate>
 <date>2023.03.25</date>
 <n>84</n>
+</correction>
+<correction>
+<citation>89:29.1</citation>
+<description>Unusual accent pair: dehi, revia. Add transcription note 'c' after the second lamed.</description>
+<author>Ben Denckla</author>
+<filedate>2025.10.19</filedate>
+<date>2025.04.24</date>
+<n>2</n>
 </correction>
 <correction>
 <citation>89:42.7</citation>
@@ -2291,7 +2308,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>וּתְכוֹנֵ֢ן</w>
         <w>צַ֫דִּ֥יק</w>
         <w>וּבֹחֵ֣ן</w>
-        <w>לִ֭בּ֗וֹת</w>
+        <w>לִ֭בּ֗<x>c</x>וֹת</w>
         <w>וּכְלָי֗וֹת</w>
         <w>אֱלֹהִ֥ים</w>
         <w>צַדּֽ͏ִיק׃</w>
@@ -16708,7 +16725,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>אָֽרֶץ׃</w>
       </v>
       <v n="29">
-        <w>לְ֭עוֹלָ֗ם</w>
+        <w>לְ֭עוֹלָ֗<x>c</x>ם</w>
         <k>אשמור־</k>
         <q>אֶשְׁמָר־</q>
         <w>ל֣וֹ</w>
