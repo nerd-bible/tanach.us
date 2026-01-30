@@ -2,7 +2,6 @@
 	"name": "@nerd-bible/tanach.us",
 	"version": "0.0.1",
 	"type": "module",
-	"license": "CC0-1.0",
 	"devDependencies": {
 		"@nerd-bible/core": "file:../core",
 		"@types/unzipper": "^0.10.11",
@@ -13,6 +12,5 @@
 	"scripts": {
 		"download": "node ./src/download.ts",
 		"convert": "node ./src/convert.ts"
-	},
-	"files": ["dist"]
+	}
 }
