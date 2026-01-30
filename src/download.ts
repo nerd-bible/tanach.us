@@ -1,17 +1,17 @@
 import { unlink, writeFile } from "node:fs/promises";
 import { Open } from "unzipper";
 
-const url = "https://www.tanach.us/Books/Tanach.xml.zip";
+const url = new URL("https://www.tanach.us/Books/Tanach.xml.zip");
+const fname = url.pathname.split("/").pop()!;
 export const downloadDir = "downloads";
-const downloadPath = "Tanach.xml.zip";
 
 async function downloadAndUnzip() {
 	const resp = await fetch(url);
 	const body = await resp.bytes();
-	await writeFile(downloadPath, body);
-	const directory = await Open.file(downloadPath);
+	await writeFile(fname, body);
+	const directory = await Open.file(fname);
 	await directory.extract({ path: downloadDir });
-	await unlink(downloadPath);
+	await unlink(fname);
 }
 
 if (import.meta.main) await downloadAndUnzip();
