@@ -1,5 +1,7 @@
 # tanach.us
 
+[![GitHub license](https://img.shields.io/github/license/nerd-bible/tanach.us?style=for-the-badge)](./LICENSE)
+
 Unofficial version control for <https://tanach.us> XML files. Updated daily.
 
 ## Usage
