@@ -12,7 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: oven-sh/setup-bun@v2
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 'latest'
+          cache: 'npm'
       - name: Tag, push, publish
         run: |
           git config user.name ci
@@ -21,10 +24,10 @@ jobs:
           if git diff-index --cached --quiet HEAD ; then
             echo "No changes"
           else
-            bun convert
+            npm run convert
             git add .
             git commit -m "New version"
-            bun pm version patch
+            npm version patch
             git push origin master
-            bun publish --access public
+            npm publish --access public
           fi
