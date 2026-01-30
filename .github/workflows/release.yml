@@ -1,4 +1,4 @@
-name: Download, maybe convert and publish
+name: Release
 on:
   push:
     branches: ["master"]
@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 'latest'
           cache: 'npm'
-      - name: Tag, push, publish
+      - name: Tag, push
         run: |
           git config user.name ci
           git config user.email ci@nerd.bible
@@ -29,5 +29,4 @@ jobs:
             git commit -m "New version"
             npm version patch
             git push origin master
-            npm publish --access public
           fi
