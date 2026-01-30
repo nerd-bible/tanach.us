@@ -16,6 +16,7 @@ jobs:
         with:
           node-version: 'latest'
           cache: 'npm'
+      - run: npm i
       - name: Keep cron active
         uses: WaterLemons2k/scheduled-workflow-activity-action@v1
       - name: Download

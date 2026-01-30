@@ -24,6 +24,7 @@ jobs:
           if git diff-index --cached --quiet HEAD ; then
             echo "No changes"
           else
+            npm i
             npm run convert
             git add .
             git commit -m "New version"
