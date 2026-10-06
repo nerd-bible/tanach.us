@@ -20,10 +20,10 @@
     </titleStmt>
     <editionStmt>
       <edition>Unicode/XML Leningrad Codex (UXLC)
-        <version>UXLC 2.4</version>
-        <date>19 Oct 2025</date>
-        <build>27.5</build>
-        <buildDateTime>13 Oct 2025  06:35</buildDateTime>
+        <version>UXLC 2.5</version>
+        <date>1 Apr 2026</date>
+        <build>27.6</build>
+        <buildDateTime>31 Mar 2026  12:00</buildDateTime>
       </edition>
 <respStmt>
 <resp>WLC2XML[8 Jul 2024] - Transcription from Michigan-Claremont encoding to Unicode with XML markings. See details in notes.</resp>
@@ -45,10 +45,11 @@
 <resp>Updater[2 May 2024] - Changes.xml file dated 2024.10.19 . </resp>
 <resp>Updater[2 May 2024] - Changes.xml file dated 2025.04.01 . </resp>
 <resp>Updater[2 May 2024] - Changes.xml file dated 2025.10.19 . </resp>
+<resp>Updater[2 May 2024] - Changes.xml file dated 2026.04.01 . </resp>
 <resp>ScanReplace/RemoveNewlines[18 May 2024] - Removes newlines (\n) from w, q, k tags.</resp>
 </respStmt>
     </editionStmt>
-    <extent>324762</extent>
+    <extent>333865</extent>
     <publicationStmt>
       <distributor>Via web site:
         <name>Christopher V. Kimball</name>
@@ -62,12 +63,52 @@
 The file has the MD5 hash: d31a 6a6e 9afa bf82 272c 2efb 0522 a12e 
 and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to the noted character (Lev 11:42.4, Judg 18:30.11, Isa 9.6.1, Ps 80:14.3, Job 38:13.5, Job 38:15.2) to produce the file wlc420_ps_td.txt for conversion to Unicode and XML by the program WLC2XML. The only other changes to the Groves Center text are: The book names in English and Hebrew of the Jewish Publication Society Tanach and book abbreviations from the New Revised Standard Version have been added. MC code 32 added as atnah hafukh by Steve Salisbury, 30 Sep 2021. The atnah hafukh codepoint, x05a2, has been added to the character table; it does not appear in WLC 4.20. </note>
     <correction>
+<citation>1:19.11</citation>
+<description>Examine dagesh in yod. Add 't' note.</description>
+<author>Ben Denckla</author>
+<filedate>2026.04.01</filedate>
+<date>2026.02.05</date>
+<n>1</n>
+</correction>
+<correction>
 <citation>5:5.6</citation>
 <description>Remove the dagesh from the tsadi.</description>
 <author>Daniel Holman</author>
 <filedate>2023.10.19</filedate>
 <date>2023.06.10</date>
 <n>1</n>
+</correction>
+<correction>
+<citation>5:23.9</citation>
+<description>Examine lamed for possible dagesh. Add note 't'.</description>
+<author>Ben Denckla</author>
+<filedate>2026.04.01</filedate>
+<date>2026.02.05</date>
+<n>11</n>
+</correction>
+<correction>
+<citation>6:10.1</citation>
+<description>Examine the marking under the vav and for a maqaf at end of word. Change the mark under the vav to meteg. Add note 'm'.</description>
+<author>Ben Denckla</author>
+<filedate>2026.04.01</filedate>
+<date>2026.02.05</date>
+<n>13</n>
+</correction>
+<correction>
+<citation>6:27.7</citation>
+<description>Examine maqaf-linked pair for accents. Replace meteg under kaf with merkha. Add note 'c' as the accent under the kaf could be taken as a meteg elsewhere.</description>
+<author>Ben Denckla</author>
+<filedate>2026.04.01</filedate>
+<date>2026.02.05</date>
+<n>16</n>
+</correction>
+<correction>
+<citation>6:29.7</citation>
+<description>Examine accent under shin. Change merkha to meteg. Add note 'm'.</description>
+<author>Ben Denckla</author>
+<filedate>2026.04.01</filedate>
+<date>2026.02.05</date>
+<n>17</n>
 </correction>
 <correction>
 <citation>7:1.7</citation>
@@ -92,6 +133,22 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
 <filedate>2023.10.19</filedate>
 <date>2023.06.10</date>
 <n>5</n>
+</correction>
+<correction>
+<citation>8:14.5</citation>
+<description>* Examine for revia above the bet. Remove revia.</description>
+<author>Ben Denckla</author>
+<filedate>2026.04.01</filedate>
+<date>2026.02.05</date>
+<n>25</n>
+</correction>
+<correction>
+<citation>8:16.7</citation>
+<description>Examine accent under yod (meteg, dehi). Change meteg to dehi.</description>
+<author>Ben Denckla</author>
+<filedate>2026.04.01</filedate>
+<date>2026.02.05</date>
+<n>27</n>
 </correction>
 <correction>
 <citation>9:10.6</citation>
@@ -126,6 +183,14 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
 <n>9</n>
 </correction>
 <correction>
+<citation>10:15.12</citation>
+<description>Examine markings under the first yod. Change meteg to merkha and add transcription note 'c'.</description>
+<author>Ben Denckla</author>
+<filedate>2026.04.01</filedate>
+<date>2026.02.05</date>
+<n>35</n>
+</correction>
+<correction>
 <citation>11:13.2</citation>
 <description>Unusual accent pair: dehi, revia. Add transcription note 'c' after tav.</description>
 <author>Ben Denckla</author>
@@ -140,6 +205,14 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
 <filedate>2023.10.19</filedate>
 <date>2023.06.10</date>
 <n>11</n>
+</correction>
+<correction>
+<citation>12:16.3</citation>
+<description>Examine for meteg on tav. Add transcription note 't'.</description>
+<author>Ben Denckla</author>
+<filedate>2026.04.01</filedate>
+<date>2026.02.05</date>
+<n>42</n>
 </correction>
 <correction>
 <citation>12:19.4</citation>
@@ -182,6 +255,46 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
 <n>16</n>
 </correction>
 <correction>
+<citation>16:20.4</citation>
+<description>Examine for dagesh in he. Add dagesh to he.</description>
+<author>Ben Denckla</author>
+<filedate>2026.04.01</filedate>
+<date>2026.02.05</date>
+<n>52</n>
+</correction>
+<correction>
+<citation>17:3.3</citation>
+<description>Examine vowel under the ayin: patah, qamats. Change qamats to patah and add note 't'.</description>
+<author>Ben Denckla</author>
+<filedate>2026.04.01</filedate>
+<date>2026.02.05</date>
+<n>53</n>
+</correction>
+<correction>
+<citation>17:4.4</citation>
+<description>Examine for dagesh in mem. Remove dagesh and add note 't'.</description>
+<author>Ben Denckla</author>
+<filedate>2026.04.01</filedate>
+<date>2026.02.05</date>
+<n>54</n>
+</correction>
+<correction>
+<citation>17:6.4</citation>
+<description>Examine for dagesh in tav. Add dagesh to tav.</description>
+<author>Ben Denckla</author>
+<filedate>2026.04.01</filedate>
+<date>2026.02.05</date>
+<n>55</n>
+</correction>
+<correction>
+<citation>17:11.6</citation>
+<description>Examine second bet for possible dagesh. Add dagesh to second bet.</description>
+<author>Ben Denckla</author>
+<filedate>2026.04.01</filedate>
+<date>2026.02.05</date>
+<n>56</n>
+</correction>
+<correction>
 <citation>18:4.4</citation>
 <description>Change patah under he to hataf-patah. Add dagesh to mem.</description>
 <author>Daniel Holman</author>
@@ -196,6 +309,14 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
 <filedate>2023.10.19</filedate>
 <date>2023.06.10</date>
 <n>18</n>
+</correction>
+<correction>
+<citation>18:9.2</citation>
+<description>Examine for dagesh in ayin. Add dagesh to ayin.</description>
+<author>Ben Denckla</author>
+<filedate>2026.04.01</filedate>
+<date>2026.02.05</date>
+<n>60</n>
 </correction>
 <correction>
 <citation>19:2.5</citation>
@@ -214,12 +335,36 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
 <n>20</n>
 </correction>
 <correction>
+<citation>19:5.7</citation>
+<description>* Examine tav for dagesh (and rafe).</description>
+<author>Ben Denckla</author>
+<filedate>2026.04.01</filedate>
+<date>2026.02.05</date>
+<n>62</n>
+</correction>
+<correction>
 <citation>19:16.2</citation>
 <description>Add dagesh to qof.</description>
 <author>Daniel Holman</author>
 <filedate>2023.10.19</filedate>
 <date>2023.06.10</date>
 <n>21</n>
+</correction>
+<correction>
+<citation>19:16.6</citation>
+<description>Examine if pe has a geresh-muqdam and a revia. [Part 2 of previous change] Change accent order to revia then geresh-muqdam; include ZWJ to achieve display or ordering. Add transcription note 't'.</description>
+<author>Ben Denckla</author>
+<filedate>2026.04.01</filedate>
+<date>2026.02.05</date>
+<n>65</n>
+</correction>
+<correction>
+<citation>19:28.2</citation>
+<description>Determine accent on the tav: dehi or tipeha. Add note 't' as pre-positive positioning is weak.</description>
+<author>Ben Denckla</author>
+<filedate>2026.04.01</filedate>
+<date>2026.02.05</date>
+<n>66</n>
 </correction>
 <correction>
 <citation>21:25.5</citation>
@@ -238,12 +383,28 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
 <n>24</n>
 </correction>
 <correction>
+<citation>22:12.6</citation>
+<description>Examine accent on the resh: dehi or tipeha. Add note 't'.</description>
+<author>Ben Denckla</author>
+<filedate>2026.04.01</filedate>
+<date>2026.02.05</date>
+<n>75</n>
+</correction>
+<correction>
 <citation>22:21.4</citation>
 <description>Word lacks accent, add note 'c'; MAM has a Etnahta (  ס֑  ) to the Lamed on this word.</description>
 <author>Ben Denckla</author>
 <filedate>2021.10.19</filedate>
 <date>2021.08.07</date>
 <n>9</n>
+</correction>
+<correction>
+<citation>22:24.5</citation>
+<description>Examine whether the second letter is a bet or a kaf. The dagesh in the initial vav is weak; add note 't'.</description>
+<author>Ben Denckla</author>
+<filedate>2026.04.01</filedate>
+<date>2026.02.05</date>
+<n>79</n>
 </correction>
 <correction>
 <citation>22:25.6</citation>
@@ -276,6 +437,22 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
 <filedate>2021.10.19</filedate>
 <date>2021.05.19</date>
 <n>3</n>
+</correction>
+<correction>
+<citation>22:30.1</citation>
+<description>* Examine markings under the yod: sheva or meteg then sheva.  Remove meteg (and its CGJ) and add note 't'.</description>
+<author>Ben Denckla</author>
+<filedate>2026.04.01</filedate>
+<date>2026.02.05</date>
+<n>81</n>
+</correction>
+<correction>
+<citation>22:30.4</citation>
+<description>Examine for dagesh in nun. Add dagesh to nun.</description>
+<author>Ben Denckla</author>
+<filedate>2026.04.01</filedate>
+<date>2026.02.05</date>
+<n>82</n>
 </correction>
 <correction>
 <citation>23:2.8</citation>
@@ -318,12 +495,28 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
 <n>31</n>
 </correction>
 <correction>
+<citation>24:16.8</citation>
+<description>Examine for possible dagesh in the dalet. Add dagesh to dalet.</description>
+<author>Ben Denckla</author>
+<filedate>2026.04.01</filedate>
+<date>2026.02.05</date>
+<n>88</n>
+</correction>
+<correction>
 <citation>24:21.1</citation>
 <description>Change segol under ayin the tsere.</description>
 <author>Daniel Holman</author>
 <filedate>2023.10.19</filedate>
 <date>2023.06.10</date>
 <n>32</n>
+</correction>
+<correction>
+<citation>24:21.1</citation>
+<description>* Examine vowel under ayin: tsere or segol. Add note 't'.</description>
+<author>Ben Denckla</author>
+<filedate>2026.04.01</filedate>
+<date>2026.02.05</date>
+<n>90</n>
 </correction>
 <correction>
 <citation>27:2.1</citation>
@@ -374,6 +567,30 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
 <n>37</n>
 </correction>
 <correction>
+<citation>31:15.1</citation>
+<description>Examine he for geresh-muqdam accent; examine order of markings below the he. Add note 't' as geresh-muqdam is ill-formed.</description>
+<author>Ben Denckla</author>
+<filedate>2026.04.01</filedate>
+<date>2026.02.05</date>
+<n>109</n>
+</correction>
+<correction>
+<citation>31:19.3</citation>
+<description>Examine accent below the alef: dehi or tipeha. Change dehi to tipeha.</description>
+<author>Ben Denckla</author>
+<filedate>2026.04.01</filedate>
+<date>2026.02.05</date>
+<n>110</n>
+</correction>
+<correction>
+<citation>31:28.2</citation>
+<description>Examine accent under the he: dehi or tipeha.</description>
+<author>Ben Denckla</author>
+<filedate>2026.04.01</filedate>
+<date>2026.02.05</date>
+<n>112</n>
+</correction>
+<correction>
 <citation>32:6.6</citation>
 <description>Change merkha under mem to meteg. Add note 'm'.</description>
 <author>Daniel Holman</author>
@@ -406,12 +623,36 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
 <n>41</n>
 </correction>
 <correction>
+<citation>34:10.2</citation>
+<description>Examine accent on alef: meteg or merkha. Change merkha to meteg under the alef. Add note 'm'.</description>
+<author>Ben Denckla</author>
+<filedate>2026.04.01</filedate>
+<date>2026.02.05</date>
+<n>122</n>
+</correction>
+<correction>
+<citation>34:19.7</citation>
+<description>Examine for dagesh in nun. Add dagesh to nun. Add note 't'.</description>
+<author>Ben Denckla</author>
+<filedate>2026.04.01</filedate>
+<date>2026.02.05</date>
+<n>123</n>
+</correction>
+<correction>
 <citation>36:11.3</citation>
 <description>Move ole from over yod to over ayin.</description>
 <author>Daniel Holman</author>
 <filedate>2023.10.19</filedate>
 <date>2023.06.10</date>
 <n>42</n>
+</correction>
+<correction>
+<citation>36:29.7</citation>
+<description>Examine whether kaf has a meteg. Add a meteg under the kaf and a transcription note 't'.</description>
+<author>Ben Denckla</author>
+<filedate>2026.04.01</filedate>
+<date>2026.02.05</date>
+<n>136</n>
 </correction>
 <correction>
 <citation>37:19.5</citation>
@@ -422,12 +663,28 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
 <n>43</n>
 </correction>
 <correction>
+<citation>37:19.5</citation>
+<description>Remove maqaf at end of word. (Rework of 2023.10.19 - Changes.xml, 2023.06.10 - 43)</description>
+<author>Ben Denckla</author>
+<filedate>2026.04.01</filedate>
+<date>2026.01.29</date>
+<n>1</n>
+</correction>
+<correction>
 <citation>37:20.2</citation>
 <description>Change dehi under the lamed to tipeha. Add note 'd'.</description>
 <author>Daniel Holman</author>
 <filedate>2023.10.19</filedate>
 <date>2023.06.10</date>
 <n>44</n>
+</correction>
+<correction>
+<citation>38:17.6</citation>
+<description>Examine for possible dagesh in mem. Add dagesh to mem.</description>
+<author>Ben Denckla</author>
+<filedate>2026.04.01</filedate>
+<date>2026.02.05</date>
+<n>143</n>
 </correction>
 <correction>
 <citation>38:20.6</citation>
@@ -438,12 +695,28 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
 <n>45</n>
 </correction>
 <correction>
+<citation>38:27.2</citation>
+<description>Examine accent on shin: dehi or tipeha. Change dehi to tipeha. Add note 'd'.</description>
+<author>Ben Denckla</author>
+<filedate>2026.04.01</filedate>
+<date>2026.02.05</date>
+<n>145</n>
+</correction>
+<correction>
 <citation>39:2.4</citation>
 <description>Move revia from dalet to tav.</description>
 <author>Moshe Greenberg</author>
 <filedate>2022.12.07</filedate>
 <date>2022.08.22</date>
 <n>1</n>
+</correction>
+<correction>
+<citation>39:2.4</citation>
+<description>* Examine accent over tav: revia or geresh. Change revia to geresh.</description>
+<author>Ben Denckla</author>
+<filedate>2026.04.01</filedate>
+<date>2026.02.05</date>
+<n>147</n>
 </correction>
 <correction>
 <citation>39:30.2</citation>
@@ -469,6 +742,14 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
 <filedate>2023.10.19</filedate>
 <date>2023.06.10</date>
 <n>48</n>
+</correction>
+<correction>
+<citation>42:13.6</citation>
+<description>Examine bet for possible dagesh. Remove dagesh from bet.</description>
+<author>Ben Denckla</author>
+<filedate>2026.04.01</filedate>
+<date>2026.02.05</date>
+<n>162</n>
 </correction>
 </notesStmt>
     <sourceDesc>
@@ -870,7 +1151,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>בְּאַרְבַּע֙</w>
         <w>פִּנּ֣וֹת</w>
         <w>הַבַּ֔יִת</w>
-        <w>וַיִּפֹּ֥ל</w>
+        <w>וַיִּ<x>t</x>פֹּ֥ל</w>
         <w>עַל־</w>
         <w>הַנְּעָרִ֖ים</w>
         <w>וַיָּמ֑וּתוּ</w>
@@ -1842,7 +2123,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>וְחַיַּ֥ת</w>
         <w>הַ֝שָּׂדֶ֗ה</w>
         <w>הָשְׁלְמָה־</w>
-        <w>לָֽךְ׃</w>
+        <w>לָֽ<x>t</x>ךְ׃</w>
       </v>
       <v n="24">
         <w>וְֽ֭יָדַעְתָּ</w>
@@ -1975,7 +2256,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>וִֽיבַצְּעֵֽנִי׃</w>
       </v>
       <v n="10">
-        <w>וּ֥תְהִי</w>
+        <w>וּֽ<x>m</x>תְהִי</w>
         <w>ע֨וֹד ׀</w>
         <w>נֶ֘חָ֤מָתִ֗י</w>
         <w>וַאֲסַלְּדָ֣ה</w>
@@ -2136,7 +2417,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>תַּפִּ֑ילוּ</w>
         <w>וְ֝תִכְר֗וּ</w>
         <w>עַל־</w>
-        <w>רֵֽיעֲכֶֽם׃</w>
+        <w>רֵֽיעֲכֶ֥<x>c</x>ם׃</w>
       </v>
       <v n="28">
         <w>וְ֭עַתָּה</w>
@@ -2155,7 +2436,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>תְּהִ֣י</w>
         <w>עַוְלָ֑ה</w>
         <k>ושבי</k>
-        <q>וְשׁ֥וּבוּ</q>
+        <q>וְשֽׁ<x>m</x>וּבוּ</q>
         <w>ע֝וֹד</w>
         <w>צִדְקִי־</w>
         <w>בָֽהּ׃</w>
@@ -2525,7 +2806,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>יָק֥וֹט</w>
         <w>כִּסְל֑וֹ</w>
         <w>וּבֵ֥ית</w>
-        <w>עַ֝כָּבִ֗<x>t</x>ישׁ</w>
+        <w>עַ֝כָּב<x>t</x>ִישׁ</w>
         <w>מִבְטַחֽוֹ׃</w>
       </v>
       <v n="15">
@@ -2546,7 +2827,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>שָׁ֑מֶשׁ</w>
         <w>וְעַ֥ל</w>
         <w>גַּ֝נָּת֗וֹ</w>
-        <w>יֹֽנַקְתּ֥וֹ</w>
+        <w>יֹ֭נַקְתּ֥וֹ</w>
         <w>תֵצֵֽא׃</w>
       </v>
       <v n="17">
@@ -3083,7 +3364,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>שְׂבַ֥ע</w>
         <w>קָ֝ל֗וֹן</w>
         <w>וּרְאֵ֥ה</w>
-        <w>עָנְיֽ͏ִי׃</w>
+        <w>עָנְי֥‍ִ<x>c</x>י׃</w>
       </v>
       <v n="16">
         <w>וְ֭יִגְאֶה</w>
@@ -3505,7 +3786,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
       <v n="16">
         <w>עִ֭מּוֹ</w>
         <w>עֹ֣ז</w>
-        <w>וְתֽוּשִׁיָּ֑ה</w>
+        <w>וְתֽ<x>t</x>וּשִׁיָּ֑ה</w>
         <w>ל֝֗וֹ</w>
         <w>שֹׁגֵ֥ג</w>
         <w>וּמַשְׁגֶּֽה׃</w>
@@ -4609,7 +4890,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>מְלִיצַ֥י</w>
         <w>רֵעָ֑י</w>
         <w>אֶל־</w>
-        <w>אֱ֝ל֗וֹהַ</w>
+        <w>אֱ֝ל֗וֹהַּ</w>
         <w>דָּלְפָ֥ה</w>
         <w>עֵינִֽי׃</w>
       </v>
@@ -4655,7 +4936,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
       <v n="3">
         <w>שִֽׂימָה־</w>
         <w>נָּ֭א</w>
-        <w>עָרְבֵ֣נִי</w>
+        <w>עַ<x>t</x>רְבֵ֣נִי</w>
         <w>עִמָּ֑ךְ</w>
         <w>מִֽי</w>
         <w>ה֝֗וּא</w>
@@ -4666,7 +4947,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>כִּֽי־</w>
         <w>לִ֭בָּם</w>
         <w>צָפַ֣נְתָּ</w>
-        <w>מִּשָּׂ֑כֶל</w>
+        <w>מִ<x>t</x>שָּׂ֑כֶל</w>
         <w>עַל־</w>
         <w>כֵּ֝֗ן</w>
         <w>לֹ֣א</w>
@@ -4684,7 +4965,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>וְֽ֭הִצִּגַנִי</w>
         <w>לִמְשֹׁ֣ל</w>
         <w>עַמִּ֑ים</w>
-        <w>וְתֹ֖פֶת</w>
+        <w>וְתֹ֖פֶתּ</w>
         <w>לְפָנִ֣ים</w>
         <w>אֶֽהְיֶֽה׃</w>
       </v>
@@ -4732,7 +5013,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>זִמֹּתַ֣י</w>
         <w>נִתְּק֑וּ</w>
         <w>מ֖וֹרָשֵׁ֣י</w>
-        <w>לְבָבִֽי׃</w>
+        <w>לְבָבִּֽי׃</w>
       </v>
       <v n="12">
         <w>לַ֭יְלָה</w>
@@ -4853,7 +5134,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
       </v>
       <v n="9">
         <w>יֹאחֵ֣ז</w>
-        <w>בְּעָקֵ֣ב</w>
+        <w>בְּעָּקֵ֣ב</w>
         <w>פָּ֑ח</w>
         <w>יַחֲזֵ֖ק</w>
         <w>עָלָ֣יו</w>
@@ -5010,7 +5291,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>תַּגְדִּ֑ילוּ</w>
         <w>וְתוֹכִ֥יחוּ</w>
         <w>עָ֝לַ֗י</w>
-        <w>חֶרְפָּתִּֽ<x>t</x>י׃</w>
+        <w>חֶרְפָּתִּֽ<x>t</x><x>t</x>י׃</w>
       </v>
       <v n="6">
         <w>דְּֽעוּ־</w>
@@ -5108,7 +5389,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>וְלֹ֣א</w>
         <w>יַעֲנֶ֑ה</w>
         <w>בְּמוֹ־</w>
-        <w>פִ֝֗י</w>
+        <w>פִ֗<x>t</x>‍֝י</w>
         <w>אֶתְחַנֶּן־</w>
         <w>לֽוֹ׃</w>
       </v>
@@ -5221,7 +5502,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
       </v>
       <v n="28">
         <w>כִּ֣י</w>
-        <w>תֹ֭אמְרוּ</w>
+        <w>תֹ֭<x>t</x>אמְרוּ</w>
         <w>מַה־</w>
         <w>נִּרְדָּף־</w>
         <w>ל֑וֹ</w>
@@ -5934,7 +6215,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>גֹּ֣בַהּ</w>
         <w>שָׁמָ֑יִם</w>
         <w>וּרְאֵ֤ה</w>
-        <w>רֹ֖אשׁ</w>
+        <w>רֹ֖<x>t</x>אשׁ</w>
         <w>כּוֹכָבִ֣ים</w>
         <w>כִּי־</w>
         <w>רָֽמּוּ׃</w>
@@ -6046,7 +6327,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>עַל־</w>
         <w>עָפָ֥ר</w>
         <w>בָּ֑צֶר</w>
-        <w>וּבְצ֖וּר</w>
+        <w>וּ<x>t</x>בְצ֖וּר</w>
         <w>נְחָלִ֣ים</w>
         <w>אוֹפִֽיר׃</w>
       </v>
@@ -6096,10 +6377,10 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>יוֹשִֽׁעַ׃</w>
       </v>
       <v n="30">
-        <w>יֽ͏ְמַלֵּ֥ט</w>
+        <w>יְ<x>t</x>מַלֵּ֥ט</w>
         <w>אִֽי־</w>
         <w>נָקִ֑י</w>
-        <w>וְ֝נִמְלַ֗ט</w>
+        <w>וְ֝נִּמְלַ֗ט</w>
         <w>בְּבֹ֣ר</w>
         <w>כַּפֶּֽיךָ׃</w>
         <pe/>
@@ -6419,7 +6700,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>חִתְּמוּ־</w>
         <w>לָ֗מוֹ</w>
         <w>לֹא־</w>
-        <w>יָ֥דְעוּ</w>
+        <w>יָ֥דְּעוּ</w>
         <w>אֽוֹר׃</w>
       </v>
       <v n="17">
@@ -6470,7 +6751,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>עַוְלָֽה׃</w>
       </v>
       <v n="21">
-        <w>רֹעֵ֣ה</w>
+        <w>רֹעֵ֣<x>t</x>ה</w>
         <w>עֲ֭קָרָה</w>
         <w>לֹ֣א</w>
         <w>תֵלֵ֑ד</w>
@@ -7855,7 +8136,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>אֲשִׁיבֶֽנּוּ׃</w>
       </v>
       <v n="15">
-        <w>הֲ‍ֽ֝לֹא־</w>
+        <w>הֲ‍ֽ֝ל<x>t</x>ֹא־</w>
         <w>בַ֭בֶּטֶן</w>
         <w>עֹשֵׂ֣נִי</w>
         <w>עָשָׂ֑הוּ</w>
@@ -7893,7 +8174,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
       <v n="19">
         <w>אִם־</w>
         <w>אֶרְאֶ֣ה</w>
-        <w>א֭וֹבֵד</w>
+        <w>א֖וֹבֵד</w>
         <w>מִבְּלִ֣י</w>
         <w>לְב֑וּשׁ</w>
         <w>וְאֵ֥ין</w>
@@ -7979,7 +8260,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
       </v>
       <v n="28">
         <w>גַּם־</w>
-        <w>ה֭וּא</w>
+        <w>ה֖<x>d</x>וּא</w>
         <w>עָוֺ֣ן</w>
         <w>פְּלִילִ֑י</w>
         <w>כִּֽי־</w>
@@ -8763,7 +9044,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
       </v>
       <v n="10">
         <w>לָכֵ֤ן ׀</w>
-        <w>אַ֥נֲשֵׁ֥י</w>
+        <w>אַֽ<x>m</x>נֲשֵׁ֥י</w>
         <w>לֵבָ֗ב</w>
         <w>שִׁמְע֫וּ</w>
         <w>לִ֥י</w>
@@ -8858,7 +9139,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>פְּנֵ֥י</w>
         <w>שָׂרִ֗ים</w>
         <w>וְלֹ֣א</w>
-        <w>נִכַּר־</w>
+        <w>נִּ<x>t</x>כַּר־</w>
         <w>שׁ֭וֹעַ</w>
         <w>לִפְנֵי־</w>
         <w>דָ֑ל</w>
@@ -9478,7 +9759,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>מִפְרְשֵׂי־</w>
         <w>עָ֑ב</w>
         <w>תְּ֝שֻׁא֗וֹת</w>
-        <w>סֻכָּתֽוֹ׃</w>
+        <w>סֻכָּֽ<x>t</x>תֽוֹ׃</w>
       </v>
       <v n="30">
         <w>הֵן־</w>
@@ -9697,7 +9978,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>מַה־</w>
         <w>נֹּ֣אמַר</w>
         <w>ל֑וֹ</w>
-        <w>לֹֽ<x>m</x>א־</w>
+        <w>לֹֽ<x>m</x>א</w>
         <w>נַ֝עֲרֹ֗ךְ</w>
         <w>מִפְּנֵי־</w>
         <w>חֹֽשֶׁךְ׃</w>
@@ -9915,7 +10196,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>שַׁעֲרֵי־</w>
         <w>מָ֑וֶת</w>
         <w>וְשַׁעֲרֵ֖י</w>
-        <w>צַלְמָ֣וֶת</w>
+        <w>צַלְמָּ֣וֶת</w>
         <w>תִּרְאֶֽה׃</w>
       </v>
       <v n="18">
@@ -10009,7 +10290,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
       </v>
       <v n="27">
         <w>לְהַשְׂבִּ֣יעַ</w>
-        <w>שֹׁ֭אָה</w>
+        <w>שֹׁ֖<x>d</x>אָה</w>
         <w>וּמְשֹׁאָ֑ה</w>
         <w>וּ֝לְהַצְמִ֗יחַ</w>
         <w>מֹ֣צָא</w>
@@ -10163,7 +10444,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>תִּסְפֹּ֣ר</w>
         <w>יְרָחִ֣ים</w>
         <w>תְּמַלֶּ֑אנָה</w>
-        <w>וְ֝יָדַעְתָּ֗</w>
+        <w>וְ֝יָדַעְתָּ֜</w>
         <w>עֵ֣ת</w>
         <w>לִדְתָּֽנָה׃</w>
       </v>
@@ -11174,7 +11455,7 @@ and was dated 25 Jan 2016. Six transcription notes (5,7,F) have been moved to th
         <w>שִׁבְעָ֥נָה</w>
         <w>בָנִ֖ים</w>
         <w>וְשָׁל֥וֹשׁ</w>
-        <w>בָּנֽוֹת׃</w>
+        <w>בָנֽוֹת׃</w>
       </v>
       <v n="14">
         <w>וַיִּקְרָ֤א</w>
